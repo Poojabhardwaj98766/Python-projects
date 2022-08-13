@@ -16,12 +16,8 @@ class login_page:
 
         main_Frame = Frame(self.root, bd=0, relief=RIDGE, bg='white')
         main_Frame.place(x=70, y=70, width=650, height=410)
-
-        # self.var_stud_name = StringVar()
         self.var_stud_Email = StringVar()
-        # self.var_stud_contact = StringVar()
         self.var_stud_password = StringVar()
-        # self.var_stud_conf_pass = StringVar()
 
         self.otp=''
 

@@ -157,19 +157,7 @@ class managment:
         #============= database frame ========================
         data_Frame = Frame(self.root, bd=7, bg=bg_color, relief=GROOVE)
         data_Frame.place(x=370, y=150, width=980, height=330)
-        # search_lb1 = Label(data_Frame, text="Search By", bg=bg_color, font=("time new roman", 18, "bold"))
-        # search_lb1.grid(row=0, column=1, padx=20, pady=5)
-
-        # combo_search=ttk.Combobox(data_Frame,width=10,textvariable=self.search_by,font=("times new roman",13,"bold"),state='readonly')
-        # combo_search['values']=("URN","CRN","NAME")
-        # combo_search.grid(row=0,column=2,padx=30,pady=10)
- 
-        # self.search_txt = Entry(data_Frame, width=15, textvariable=self.search_t, fg="black",font="arial 15", bd=6, relief=SUNKEN)
-        # self.search_txt.grid(row=0, column=3, pady=5, padx=50)
         
-        # self.search_btn = Button(data_Frame, text="Search", command=self.search_data,bg="cadetblue", fg="white", bd=5, pady=3, width=10, font="arial 12").grid(row=0, column=4, padx=50, pady=5)
-
-        # self.show_btn = Button(data_Frame, text="Show All",command=self.fetch_data, bg="cadetblue", fg="white", bd=5,pady=3, width=10, font="arial 12").grid(row=0, column=5, padx=0, pady=0)
         
         Table_Frame = Frame(data_Frame, bd=7, bg='white', relief=GROOVE)
         Table_Frame.place(x=10, y=10, width=940, height=290)
@@ -340,12 +328,7 @@ class managment:
 
 
 
-        #============= Qr code =========================
-        # QR_Frame = Frame(F5, bd=7, bg='white', relief=GROOVE)
-        # QR_Frame.place(x=20, y=20, width=200, height=100)
-        # self.qr_code = Label(QR_Frame, text='No QR \nAvaliable', font=(
-        #     "times new roman", 20), bg="white", fg='dark blue')
-        # self.qr_code.place(x=0, y=0, width=150, height=150)
+      
 
 
     def QR_generate(self):
@@ -360,30 +343,8 @@ class managment:
         # #========QR code image updating===========
             self.im = ImageTk.PhotoImage(file="student_QR/Stud_"+str(self.URN_txt.get())+'.png')
             self.qr_code.config(image=self.im)
-        
-
     
-    # def search_data(self):
-    #     con = mysql.connector.connect(user='root',
-    #                                   password='Pooja@2015104',
-    #                                   host='127.0.0.1',
-    #                                   port='3306',
-    #                                   database='registration')
-    #     mycursor = con.cursor()
-    #     sql = "SELECT * FROM cse_info WHERE 'self.search_by.get()' LIKE '%'self.search_t.get()'%'"
-    #     mycursor.execute(sql)
-    #     rows = mycursor.fetchall()
-    #     if len(rows) != 0:
-    #         self.Student_table.delete(*self.Student_table.get_children())
-    #         for row in rows:
-    #             self.Student_table.insert('', END, values=row)
-    #         con.commit()
-    #     con.close()
-
         
-
-
-
     def obt_marks(self):     
         self.obtained_marks=StringVar()
         self.Total_marks = StringVar()

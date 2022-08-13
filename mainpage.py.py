@@ -8,7 +8,6 @@ class main_page:
         self.root = root
         self.root.title("MAIN PAGE || Developed By Pooja Bhardwaj ")
         self.root.geometry("900x600+170+50")
-        # self.root.config(bg="#009999")
         self.root.config(bg="#ffc046")
 
         self.root.resizable(False, False)
@@ -18,7 +17,6 @@ class main_page:
        
         # #====== images ==========================
        
-        # self.main_image.resizable(300,300)
 
         main_Frame = Frame(self.root, bd=1, relief=RIDGE, bg='white', highlightbackground="black",highlightthickness=1)
         main_Frame.place(x=100,y=80,width=710,height=450)
@@ -29,8 +27,7 @@ class main_page:
         self.img_image_resized.save('mainpage1.png')
         self.main_image = ImageTk.PhotoImage(file="mainpage1.png")
         self.lb1_main_image = Label(main_Frame, image=self.main_image, bg="white").place(x=50, y=170)
-        # self.main_image=ImageTk.PhotoImage(file="mainpage1.png")
-        # self.lb1_main_image=Label(main_Frame,image=self.main_image,bg="white").place(x=70,y=200)
+       
         lb1_stud=Label(main_Frame,text="Student Login",font=("time new roman",30,'bold'),bg="white").place (x=50,y=45)
         lb1_stud2=Label(main_Frame,text=("Welcome to Student Managment System \nDeveloped by Pooja Bhardwaj "),font=("goudy old style",13),bg="white").place (x=55,y=100)
         #============= image frame 2 ==============================
@@ -43,14 +40,7 @@ class main_page:
         self.logo_image_resized.save('gndeclogo.png')
         self.logo_image=ImageTk.PhotoImage(file="gndeclogo.png")
         self.lb1_logo_image=Label(img_Frame,image=self.logo_image,bg="white").place(x=10,y=0)
-        # image = Image.open('degree1.png')
-        # print(f"Original size : {image.size}")  # 5464x3640
-
-        # self.img_image_resized = image.resize((200, 150))
-        # self.img_image_resized.save('degree1.png')
-        # self.img_image=ImageTk.PhotoImage(file="degree1.png")
-        # self.lb1_img_image=Label(img_Frame,image=self.img_image,bg="white").place(x=30,y=0)
-
+       
 
         #============ option2 frame================
         option_Frame = Frame(self.root, bd=0, relief=RIDGE, bg='white')
